@@ -56,30 +56,13 @@ function validateToEmail(algo){
 //---> Para cambiar el valor de la contraseña por X y almacenarlo. 
   function changePassword(clave){
 
-    var contra= valorPassword.value; 
-  
-//creo un arrego vacio
-    var newpass=[];
+    valorPassword.otro=clave.value;
+    console.log(valorPassword.otro);
+ 
+console.log(`Contraseña: ${clave.value}`);
 
-//guardo cada valor de la contraseña dentro de arreglo
-for(var i=0; i<contra.length;i++){
-newpass[i]=contra.charAt(i);
-}     
-
-//igualo cada valor del arreglo a X
-for(var i=0; i<newpass.length;i++){
-newpass[i]='X';
 }
 
-//convierto el arreglo a un string
-var newpassX=newpass.join('');
-
-//imprimo la contraseña 
-console.log('Su Password es:'+newpassX);
-//en esta variable se guarda la contraseña del usuario sin ser modificada,
-// muestro el mensaje solo para que veas el valor almacenado.
-alert(`Su contraseña ha sido guardada con el siguiente valor: ${valorPassword.valor.value}`)
-}
 
     }
 }

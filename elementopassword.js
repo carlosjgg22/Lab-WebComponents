@@ -2,7 +2,7 @@ let tempElemento3 = document.createElement('template');
 
 tempElemento3.innerHTML=`
 
-<input class="input-mail" type="password" name="clave">
+<input class="input-mail" type="text"  name="clave">
 <style>
 .input-mail{
 padding:20px;
@@ -22,10 +22,28 @@ class ElementoPassword extends HTMLElement{
         this._shadowRoot.appendChild(tempElemento3.content, true); 
 
         var password = this._shadowRoot.querySelector("input[name='clave']"); 
-        
+        let keysPressed = {}; 
+        let newpass=[];
         valorPassword=password; 
         valorPassword.valor=password;
-    }
+       
+
+        password.addEventListener('keyup', ocultarClave=>{
+    
+    valorPassword.value=valorPassword.value.replace(/\w/g,"X");
+
+    });
+    
+    password.addEventListener('keydown', (guardarClave)=>{
+        keysPressed[guardarClave.key] = true;
+        
+      console.log(guardarClave.key);
+       
+     });
+      
+  
+
+}
 
 }
 
