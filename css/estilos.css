@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+    margin:0;
+    font-family: roboto;
+}
+
+.formulario{
+    width: 500px;
+    margin:auto;
+    margin-top: 20px;
+    padding:20px;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    position:relative; 
+
+}
+
+.formulario-titulo{
+    text-align: center;
+    margin-top: 0;
+    color: rgba(0,0,0,0.7)
+}
+
+.formulario-label{
+    display: block;
+    width: 100%;
+    font-size: 1.3em;
+ 
+}
+
+.formulario-label{
+    padding-left: 25px;
+    position: absolute;
+    margin-top: -13px;  
+
+}
+
+.div-nombre, .div-mail, .div-password, .div-button{
+padding:20px;
+margin-bottom:1px;  
+}
+
+.div-nombre:focus+.formulario-label{
+    margin-top: -13px;
+}

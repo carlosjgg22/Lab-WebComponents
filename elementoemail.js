@@ -1,9 +1,17 @@
 let tempElemento2 = document.createElement('template'); 
 
 tempElemento2.innerHTML=`
-<div class="email-div">
-<br>Email:<input type="mail" id="email" name="correo">
-</div>
+
+<input class="input-mail" "type="text" id="email" name="correo">
+<style>
+.input-mail{
+padding:20px;
+border: 1px solid rgba(0,0,0,0.3);
+margin-bottom:1px;
+width:90%;
+background=transparent;
+}
+</style>
 `;
 
 class ElementoEmail extends HTMLElement{

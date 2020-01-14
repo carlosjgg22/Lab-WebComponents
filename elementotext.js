@@ -2,7 +2,15 @@ let tempElemento1=document.createElement('template');
 
 
 tempElemento1.innerHTML=` 
-<br>Nombre: <input type="text" name="nombre">
+<input class="input-nombre" type="text" name="nombre">
+<style>
+.input-nombre{
+padding:20px;
+border: 1px solid rgba(0,0,0,0.3);
+margin-bottom:1px;
+width:90%;
+}
+</style>
 `; 
 
 class ElementoText extends HTMLElement{

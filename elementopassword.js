@@ -2,7 +2,16 @@ let tempElemento3 = document.createElement('template');
 
 tempElemento3.innerHTML=`
 
-<br>Password:<input type="password" name="clave">
+<input class="input-mail" type="password" name="clave">
+<style>
+.input-mail{
+padding:20px;
+border: 1px solid rgba(0,0,0,0.3);
+margin-bottom:1px;
+width:90%;
+background=transparent;
+}
+</style>
 `; 
 
 class ElementoPassword extends HTMLElement{

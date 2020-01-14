@@ -4,18 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
     <title>Primer Taller Práctico, LAB Neoris/Polymer/Cells</title>
-    <script> var valorGlobal={}, valorEmail={},valorPassword={}</script>
+    <script> var valorGlobal={}, valorEmail={},valorPassword={}
+    </script>
     <script src="elementoboton.js"></script>
     <script src="elementotext.js"></script>
     <script src="elementoemail.js"></script>
     <script src="elementopassword.js"></script>
 </head>
 <body>
-   <br> <neoris-text></neoris-text>
-   <br><neoris-mail></neoris-mail>
-   <br><neoris-password></neoris-password>
-   <br><neoris-boton></neoris-boton>
-  
+    <main class="main">
+    <form action="" class="formulario">
+        <h1 class="formlario-titulo">Datos Ingresados</h1>    
+            <label class="formulario-label"> Nombre:</label> 
+        <div class="div-nombre">
+            <neoris-text></neoris-text>
+        </div>
+        
+            <label class="formulario-label"> Email:</label> 
+            <div class="div-mail">
+            <neoris-mail></neoris-mail>    
+            </div> 
+
+            <label class="formulario-label"> Password:</label>    
+           
+            <div class="div-password">
+            <neoris-password></neoris-password>
+            </div>
+
+            <div class="div-button">
+            <neoris-boton></neoris-boton>
+            </div>
+    </form>
+<main>
+<script src="js/formulario.js"></script>
 </body>
 </html>

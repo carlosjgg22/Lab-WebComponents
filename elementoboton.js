@@ -2,7 +2,16 @@ let tempElemento4= document.createElement('template');
 
 tempElemento4.innerHTML=`
 
-<br><button>Enviar Datos</button>
+<button class="input-button">Enviar Datos</button>
+<style>
+.input-button{
+padding:20px;
+border: 1px solid rgba(0,0,0,0.3);
+margin-bottom:1px;
+width:100%;
+background=transparent;
+}
+</style>
 `; 
 
 class  ElementoBoton extends HTMLElement{
@@ -29,36 +38,20 @@ function nametoUpperCase(variable){
     }
 
 //--->Funcion para validar el Email con @ y .com
-    function validateToEmail(email){
-   //tomo el valor del input de email 
-  var mailcap= valorEmail.value;
-  //guardo el valor de la longitud del email del input en una variable para iterarlo 
-  var dimension= mailcap.length;
-  //declaro una constante para una validación 
-  const word=".com";
-  //ejecuto ciclo for con la dimesion del campo del input
-  for(var i=0;i<dimension-1;i++){
-      if(mailcap.charAt(i)=="@"){
-       var premisa1= true; 
-      } 
-  //busco si en la cadena de texto existe un punto, se ser verdadero evaluo si seguido existe
-      if(mailcap.charAt(i)=="."){
-          //hago un substring desde el punto hasta el final de la cadena para  formar la .com
-        var cadena = mailcap.substring(i,dimension);  
-          //comparo con la constate de validación 
-         if(cadena==word){
-             var premisa2=true; 
-         }
-      }
-  }
-    //para los mensajes de validación de email  
-  if(premisa1&&premisa2){
-      console.log("Validación de mail: El email es válido, contiene el carácter @ y el .com");
-  }  else {
-      console.log("Validación de mail: El email introducido no es una dirección válida");
-  } 
+function validateToEmail(algo){
+    var correo = valorEmail.value;
 
-  }
+//expresion regular para validación de correo electronico
+    const validacion=/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/
+
+    if(validacion.test(correo)){
+        
+    console.log(`El correo ingresado: ${correo} es Válido` )
+    }else{
+        console.log(`El correo ingresado: ${correo} es Inválido`)
+    }
+    }
+
   
 //---> Para cambiar el valor de la contraseña por X y almacenarlo. 
   function changePassword(clave){
@@ -90,5 +83,4 @@ alert(`Su contraseña ha sido guardada con el siguiente valor: ${valorPassword.v
 
     }
 }
-
 customElements.define('neoris-boton',ElementoBoton);
