@@ -25,24 +25,23 @@ class ElementoPassword extends HTMLElement{
         let keysPressed = {}; 
         let newpass=[];
         valorPassword=password; 
-        valorPassword.valor=password;
        
-
-        password.addEventListener('keyup', ocultarClave=>{
     
-    valorPassword.value=valorPassword.value.replace(/\w/g,"X");
 
+    password.addEventListener('keyup', ocultarClave=>{
+
+    
+   valorPassword.value=valorPassword.value.replace(/\w/g,"X");
+ 
     });
+    
     
     password.addEventListener('keydown', (guardarClave)=>{
         keysPressed[guardarClave.key] = true;
-        
-      console.log(guardarClave.key);
-       
-     });
-      
-  
 
+      
+    v+=guardarClave.key;
+       });     
 }
 
 }

@@ -27,7 +27,7 @@ var boton= this._shadowRoot.querySelector('button');
 boton.addEventListener('click',()=>{
     nametoUpperCase(valorGlobal);
     validateToEmail(valorEmail);
-    changePassword(valorPassword)
+    changePassword(v)
 } );
 
 
@@ -46,7 +46,7 @@ function validateToEmail(algo){
 
     if(validacion.test(correo)){
         
-    console.log(`El correo ingresado: ${correo} es Válido` )
+    console.log(`Correo Electrónico: ${correo}, su correo es Válido` )
     }else{
         console.log(`El correo ingresado: ${correo} es Inválido`)
     }
@@ -56,10 +56,7 @@ function validateToEmail(algo){
 //---> Para cambiar el valor de la contraseña por X y almacenarlo. 
   function changePassword(clave){
 
-    valorPassword.otro=clave.value;
-    console.log(valorPassword.otro);
- 
-console.log(`Contraseña: ${clave.value}`);
+console.log(`Contraseña Introducida es: ${clave}`);
 
 }
 
